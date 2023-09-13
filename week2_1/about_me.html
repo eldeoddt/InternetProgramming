@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About me</title>
+        <!-- <link href="./practice.css" rel="stylesheet" type="text/css"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+        <script type="text/javascript" src="what_time_is_it.js"></script>
+    </head>
+    <body>
+        <!-- 드롭다운 nav로 변경 - bootstrap 코드 -->
+        <!-- bg-light 삭제 시 background 색상 제거됨. bg-blue/dark로 변경 가능. -->
+        <nav class="navbar navbar-expand-lg bg-light">
+
+            <!-- container: 좌우 여백을 동일하게 주고 정렬하기 위해 사용. fluid: 고정형을 뜻한다. 일반 container는 화면에 따라 움직인다. -->
+            <div class="container-fluid">
+
+              <!-- navbar-brand: nav를 가장 잘 나타내는 브랜드이다. -->
+              <a class="navbar-brand" href="#">인터넷 프로그래밍</a>
+
+              <!-- 사이드바 버튼 : navbar-toggler -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- 화면이 넓어졌을때 target에 따라 navbarNavDropdown 보여짐 -->
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">index</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about_me.html">about me</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog_list.html">blog</a>
+                  </li>
+
+                  <!-- 드롭다운 : nav-item dropdown -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown link
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- 서치 추가 - bootstrap -->
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+          
+            </div>
+          </nav>
+
+        <!-- container: 좌우 중앙 정렬됨 -->
+        <div class="container">
+
+        <!-- bootstrap grid : 1320px를 12칸으로 나누어 관리한다. 화면 크기에 따라 변화한다. 9는 글 3은 사진 영역으로 변경 -->
+        <!-- my-3 : margin y(상하) 3단위 -->
+            <div class="row my-5">
+                <div class="col-9">
+                    <h1>About Me</h1>
+                    <h2>서울사람 이성용입니다. </h2>
+                    <p>HTML, CSS, JS, Django로 재미있는 웹사이트 만드는 것을 좋아합니다. </p>
+
+                    <button onclick="whatTimeIsIt()">현재시간</button>
+                    <hr/>
+
+                    <a href="index.html">첫 화면으로 가기</a>
+                </div>
+
+                <div class="col-3">
+                    <img src="./images/boy_01.jpg" height="300px" class="img-fluid w-100">
+                </div>
+            </div>
+           
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+</html>
