@@ -1,4 +1,4 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 from bs4 import BeautifulSoup
 from .models import Post
 
