@@ -91,6 +91,7 @@
                     {% if p.head_image %}
                     <img class="card-img-top" src="{{ p.head_image.url }}" alt="Card image cap">
                     {% else %}
+<!--                    head_image가 없는 경우 링크를 통해 임의의 이미지를 보여준다.-->
                     <img class="card-img-top" src="http://picsum.photos/seed/{{ p.id }}/800/200" alt="Card image cap">
                     {% endif %}
                     <div class="card-body">
