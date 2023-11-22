@@ -1,0 +1,19 @@
+<!-- extends를 사용하여 base와 block을 연결한다. -->
+{% extends 'blog/base.html' %}
+
+{% block head_title %}
+    Update Post-BLOG
+{% endblock %}
+
+<!-- block의 이름을 main_area로 지정한다. base에서도 동일한 이름으로 불러와야 한다. -->
+{% block main_area %}
+    <h1> EditPost </h1>
+    <hr>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+                <table>
+                    {{ form }}
+                </table>
+                <button type="submit"> Submit </button>
+        </form>
+{% endblock %}

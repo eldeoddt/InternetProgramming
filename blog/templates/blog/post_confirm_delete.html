@@ -1,0 +1,19 @@
+<!-- extends를 사용하여 base와 block을 연결한다. -->
+{% extends 'blog/base.html' %}
+
+{% block head_title %}
+    Delete Post-BLOG
+{% endblock %}
+
+<!-- block의 이름을 main_area로 지정한다. base에서도 동일한 이름으로 불러와야 한다. -->
+{% block main_area %}
+    <h1> Delete Post </h1>
+    <hr>
+        <form method="post" class="delete-form">
+            {% csrf_token %}
+                <p> 정말로 해당 글을 삭제하시나요? </p>
+
+                    <input type="submit" class="btn btn-primary" value="Delete">
+                    <a href="/blog/{{post.pk}}" class="btn btn-outline">Cancel</a>
+        </form>
+{% endblock %}
